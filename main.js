@@ -43,3 +43,12 @@ menuCloseIcon.addEventListener('click', function () {
     // menuIcon.style.display = 'flex';
     // menuCloseIcon.style.display = 'none';
 });
+
+// close slideoutMenu once a link is clicked
+slideoutMenu.addEventListener('click', function () {
+    slideoutMenu.style.opacity = '0';
+    slideoutMenu.style.pointerEvents = 'none';
+    
+    menuIcon.classList.add("menuIconDisplay");
+    menuCloseIcon.classList.remove("menuIconDisplay");
+});
