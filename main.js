@@ -4,26 +4,6 @@ const slideoutMenu = document.getElementById("slideout-menu");
 const searchIcon = document.getElementById("search-icon");
 const searchBox = document.getElementById("searchbox");
 
-// searchIcon.addEventListener('click', function () {
-//   if (searchBox.style.top == '72px') {
-//     searchBox.style.top = '24px';
-//     searchBox.style.pointerEvents = 'none';
-//   } else {
-//     searchBox.style.top = '72px';
-//     searchBox.style.pointerEvents = 'auto';
-//   }
-// });
-
-// menuIcon.addEventListener('click', function () {
-//   if (slideoutMenu.style.opacity == "1") {
-//     slideoutMenu.style.opacity = '0';
-//     slideoutMenu.style.pointerEvents = 'none';
-//   } else {
-//     slideoutMenu.style.opacity = '1';
-//     slideoutMenu.style.pointerEvents = 'auto';
-//   }
-// });
-
 menuIcon.addEventListener('click', function () {
     slideoutMenu.style.opacity = '1';
     slideoutMenu.style.pointerEvents = 'auto';
@@ -48,7 +28,38 @@ menuCloseIcon.addEventListener('click', function () {
 slideoutMenu.addEventListener('click', function () {
     slideoutMenu.style.opacity = '0';
     slideoutMenu.style.pointerEvents = 'none';
-    
+
     menuIcon.classList.add("menuIconDisplay");
     menuCloseIcon.classList.remove("menuIconDisplay");
 });
+
+
+// Window scrolling handlers
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  // if (document.body.scrollTop > window.innerHeight/2 || document.documentElement.scrollTop > window.innerHeight/2) {
+  //   document.getElementById("logo-withouttext").classList.add("hidden");
+  //   document.getElementById("logo-withtext").classList.remove("hidden");
+  // } else {
+  //   document.getElementById("logo-withouttext").classList.remove("hidden");
+  //   document.getElementById("logo-withtext").classList.add("hidden");
+  // }
+}
+
+// Window resize handlers
+  window.addEventListener('resize', resizeCanvas, false);
+
+  function resizeCanvas() {
+          // canvas.width = window.innerWidth;
+          // canvas.height = window.innerHeight;
+
+          /**
+           * Your drawings need to be inside this function otherwise they will be reset when
+           * you resize the browser window and the canvas goes will be cleared.
+           */
+          // drawStuff();
+  }
+  resizeCanvas();
+
+// Flocking code ***************

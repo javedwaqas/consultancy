@@ -58,11 +58,14 @@ textarea:focus {
 
 #banner {
   height: 100vh;
+  position: relative;
+  pointer-events: none;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: rgba(0, 0, 0, 0.2) url("img/3.jpg");
+  /* background: rgba(0, 0, 0, 0.2) url("img/3.jpg"); */
+  background: #ffffff0f;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -75,6 +78,14 @@ textarea:focus {
   border-radius: 8px;
   padding: 0 24px;
   font-size: 24px;
+}
+
+canvas {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 
 /* Search Box */
@@ -156,6 +167,10 @@ nav ul {
 
 #logo-img img {
   height: 100%;
+}
+
+#logo-img img.hidden {
+  display: none;
 }
 
 .menu-icon {
@@ -240,11 +255,13 @@ section {
   transition: all 0.4s;
   display: inline-block;
   padding: 4px 32px;
+  /* color: rgb(255, 0, 221, 0.8); */
 }
 
 .section-heading:hover {
   padding: 4px 48px;
-  background: red;
+  background: rgb(255, 0, 221, 0.8);
+  cursor: pointer;
 }
 
 /* Section Source */
@@ -546,6 +563,11 @@ ol.custom li:hover{
     width: 100%;
   }
 
+  h1 {
+    font-size: 48px;
+    font-size: 8vw;
+  }
+
   section {
     flex-direction: column;
   }
@@ -580,8 +602,8 @@ ol.custom li:hover{
 
 @media (max-width: 600px) {
   h1 {
-    font-size: 48px;
-    font-size: 10vw;
+    font-size: 42px;
+    font-size: 8vw;
   }
 
   #banner h3 {
@@ -595,8 +617,8 @@ ol.custom li:hover{
 
 @media (max-width: 400px) {
   h1 {
-    font-size: 42px;
-    font-size: 10vw;
+    font-size: 36px;
+    font-size: 8vw;
   }
 
   #banner h3 {
