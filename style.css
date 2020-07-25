@@ -17,6 +17,7 @@ p {
 }
 
 main {
+  width: 95%;
   margin: 0 auto;
 }
 
@@ -27,6 +28,13 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+.anchor:before {
+  content: "";
+  display: block;
+  height: 60px; /* fixed header height*/
+  margin: -60px 0 0; /* negative fixed header height */
 }
 
 /* Inputs */
@@ -165,6 +173,10 @@ nav ul {
   transition: 4s;
 }
 
+.menuIconDisplay{
+  display: none;
+}
+
 /* Search Icon */
 
 #search-icon {
@@ -254,12 +266,28 @@ section {
 
 /* Card */
 
+.card {
+  width: 30%;
+}
+
+.clickable-card a:hover {
+  text-decoration: none;
+}
+
+.card .card-image img {
+  width: 100%;
+}
+
 .card-image {
   transition: 0.4s;
 }
 
 .card-image:hover {
   box-shadow: 0 10px 6px -6px #777;
+}
+
+.clickable-card .card-image:hover {
+  box-shadow: none;
 }
 
 .card .card-description {
@@ -276,6 +304,20 @@ section {
 
 .card-meta-blogpost a{
   color:#333;
+}
+
+.card-description h2{
+  margin-bottom: 0;
+}
+
+.card-description h4{
+  margin-top: 0;
+}
+
+.clickable-card{
+  /* outline: 4px solid red; */
+  /* box-shadow: 5px 10px gray; */
+  box-shadow: 2px 2px 6px 2px lightgray;
 }
 
 /* Button Read more */
@@ -471,12 +513,18 @@ ol.custom li:hover{
 
 /* Media Queries */
 
+@media (max-width: 1200px) {
+  .card {
+    width: 45%;
+  }
+}
+
 @media (max-width: 900px) {
   nav ul {
     display: none;
   }
 
-  .menu-icon {
+  .menuIconDisplay{
     display: flex;
   }
 
@@ -498,18 +546,13 @@ ol.custom li:hover{
   }
 }
 
-@media (max-width: 719px) {
-  main {
-    width: 95%;
+@media (max-width: 720px) {
+  .card{
+    width: 100%;
   }
 
   section {
     flex-direction: column;
-  }
-
-  .card,
-  .card .card-image img {
-    width: 100%;
   }
 
   footer {
@@ -541,10 +584,6 @@ ol.custom li:hover{
 }
 
 @media (max-width: 600px) {
-  main {
-    width: 100%;
-  }
-
   h1 {
     font-size: 48px;
     font-size: 10vw;
@@ -554,20 +593,12 @@ ol.custom li:hover{
     font-size: 20px;
   }
 
-  .card {
-    text-align: center;
-  }
-
   #logo-img {
     padding: 0;
   }
 }
 
 @media (max-width: 400px) {
-  main {
-    width: 100%;
-  }
-
   h1 {
     font-size: 42px;
     font-size: 10vw;
@@ -577,32 +608,7 @@ ol.custom li:hover{
     font-size: 14px;
   }
 
-  .card {
-    text-align: center;
-  }
-
   #logo-img {
     padding: 0;
-  }
-}
-
-@media (min-width: 720px) {
-  main {
-    width: 95%;
-  }
-  .card {
-    width: 45%;
-  }
-  .card .card-image img {
-    width: 100%;
-  }
-}
-
-@media (min-width: 1200px) {
-  main {
-    width: 95%;
-  }
-  .card {
-    width: 30%;
   }
 }

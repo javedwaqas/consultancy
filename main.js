@@ -28,14 +28,18 @@ menuIcon.addEventListener('click', function () {
     slideoutMenu.style.opacity = '1';
     slideoutMenu.style.pointerEvents = 'auto';
 
-    menuIcon.style.display = 'none';
-    menuCloseIcon.style.display = 'flex';
+    menuIcon.classList.remove("menuIconDisplay");
+    menuCloseIcon.classList.add("menuIconDisplay");
+    // menuIcon.style.display = 'none';
+    // menuCloseIcon.style.display = 'flex';
 });
 
 menuCloseIcon.addEventListener('click', function () {
     slideoutMenu.style.opacity = '0';
     slideoutMenu.style.pointerEvents = 'none';
 
-    menuIcon.style.display = 'flex';
-    menuCloseIcon.style.display = 'none';
+    menuIcon.classList.add("menuIconDisplay");
+    menuCloseIcon.classList.remove("menuIconDisplay");
+    // menuIcon.style.display = 'flex';
+    // menuCloseIcon.style.display = 'none';
 });
