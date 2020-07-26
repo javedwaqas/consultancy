@@ -131,7 +131,8 @@ nav a {
   transition: 0.4s;
 }
 
-nav a:hover {
+nav a:hover,
+footer a:hover {
   text-decoration: none;
   color: #ff00dd;
 }
@@ -385,13 +386,6 @@ footer #right-footer {
   text-align: center;
 }
 
-footer #social-media-footer a .fa-facebook,
-footer #social-media-footer a .fa-youtube,
-footer #social-media-footer a .fa-github {
-  color: white;
-  transition: 0.4s;
-}
-
 footer #social-media-footer ul {
   display: flex;
   list-style: none;
@@ -405,8 +399,8 @@ footer #social-media-footer ul li {
   transition: 0.4s;
 }
 
-footer #social-media-footer ul li:hover a .fa-youtube {
-  color: red;
+footer #social-media-footer ul li:hover a .fa-facebook {
+  color: #0077b5;
 }
 
 footer #social-media-footer ul li:hover a .fa-linkedin-in {
@@ -418,7 +412,7 @@ footer #social-media-footer ul li:hover a .fa-graduation-cap {
 }
 
 footer #social-media-footer ul li:hover a .fa-envelope {
-  color: #FF16A9;
+  color: #0077b5;
 }
 
 /* Blog List page */

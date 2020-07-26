@@ -10,7 +10,7 @@ var canvas,
 
 
 var mouseMoveThrottle = 0.5,
-    numBoids = 100,
+    numBoids = 200,
     flockmateRadius = 60,
     separationDistance = 30,
     maxVelocity = 2,
@@ -23,6 +23,7 @@ var mouseMoveThrottle = 0.5,
     // coloring = "By Movement",
     coloring = "Rainbow",
     defaultColors = ['rgb(255,0,221)', 'rgb(0,255,221)', 'rgb(255,221,0)'],
+    // defaultColors = ['rgb(255,255,255)'],
     boids;
 
     function initiateFlocking() {
@@ -42,11 +43,14 @@ var mouseMoveThrottle = 0.5,
       offscreenContext.globalAlpha = 0.85;
 
       d3.select("canvas").on("mousemove", function(){
-        if (Math.random()>mouseMoveThrottle) return; // throttling numbers
+        // if (Math.random()>mouseMoveThrottle) return; // throttling numbers
         var xy = d3.mouse(this);
+
+        if (boids.length>0) boids.shift(); // before adding, remove a boid to keep lenght contant
+
         boids.push({
           // color: d3.interpolateRainbow((boids.length / 10) % 1),
-          color: defaultColors [Math.floor((Math.random()*defaultColors.length))],
+          color: defaultColors [Math.floor(Math.random()*defaultColors.length)],
           position: new Vec2(xy[0], xy[1]),
           velocity: randomVelocity(),
           last: []
@@ -229,7 +233,7 @@ function restartFlocking() {
   boids = window["initialize" + startingPosition]();
   boids.forEach(function(b, i){
     // b.color = d3.interpolateRainbow(i / numBoids);
-    b.color = defaultColors [i%3];
+    b.color = defaultColors [i%defaultColors.length];
     b.last = [];
   });
 }
