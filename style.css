@@ -86,6 +86,7 @@ canvas {
   position: absolute;
   top: 0px;
   left: 0px;
+  background: #000000;
 }
 
 /* Search Box */

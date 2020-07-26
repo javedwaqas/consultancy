@@ -4,6 +4,12 @@ const slideoutMenu = document.getElementById("slideout-menu");
 const searchIcon = document.getElementById("search-icon");
 const searchBox = document.getElementById("searchbox");
 
+
+//initiateFlocking
+if (initiateFlocking)
+  initiateFlocking();
+
+
 menuIcon.addEventListener('click', function () {
     slideoutMenu.style.opacity = '1';
     slideoutMenu.style.pointerEvents = 'auto';
@@ -51,6 +57,10 @@ function scrollFunction() {
   window.addEventListener('resize', resizeCanvas, false);
 
   function resizeCanvas() {
+    //initiateFlocking
+    if (initiateFlocking)
+      restartFlocking();
+
           // canvas.width = window.innerWidth;
           // canvas.height = window.innerHeight;
 
@@ -60,6 +70,4 @@ function scrollFunction() {
            */
           // drawStuff();
   }
-  resizeCanvas();
-
-// Flocking code ***************
+  // resizeCanvas();
