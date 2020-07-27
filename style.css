@@ -3,20 +3,12 @@ body {
   margin: 0;
 }
 
-h1 {
-  padding: 8px;
-  background: rgba(255, 0, 221, 0.8);
-  border-radius: 8px;
-  margin: 0;
-  font-size: 64px;
-  font-family: "Roboto Slab", serif;
-}
-
 p {
   line-height: 1.5;
 }
 
 main {
+  max-width: 1280px;
   width: 95%;
   margin: 0 auto;
 }
@@ -72,6 +64,16 @@ textarea:focus {
   background-blend-mode: overlay;
   color: white;
 }
+
+#banner h1 {
+  padding: 8px;
+  background: rgba(255, 0, 221, 0.8);
+  border-radius: 8px;
+  margin: 0;
+  font-size: 64px;
+  font-family: "Roboto Slab", serif;
+}
+
 
 #banner h3 {
   background: black;
@@ -245,19 +247,22 @@ nav ul {
 
 section {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .section-heading {
   font-size: 32px;
   font-family: "Roboto Condensed", sans-serif;
-  border-left: 3px solid black;
-  border-right: 3px solid black;
+  /* border-left: 3px solid black;
+  border-right: 3px solid black; */
   transition: all 0.4s;
   display: inline-block;
   padding: 4px 32px;
   /* color: rgb(255, 0, 221, 0.8); */
+  color: white;
+  background: #ff00ddff;
+  border-radius: 4px;
 }
 
 .section-heading:hover {
@@ -281,7 +286,7 @@ section {
 /* Card */
 
 .card {
-  width: 30%;
+  width: 32%;
 }
 
 .clickable-card a:hover {
@@ -520,9 +525,9 @@ ol.custom li:hover{
 
 /* Media Queries */
 
-@media (max-width: 1200px) {
+@media (max-width: 1028px) {
   .card {
-    width: 45%;
+    width: 48%;
   }
 }
 
@@ -558,7 +563,7 @@ ol.custom li:hover{
     width: 100%;
   }
 
-  h1 {
+  #banner h1 {
     font-size: 48px;
     font-size: 8vw;
   }
@@ -596,7 +601,7 @@ ol.custom li:hover{
 }
 
 @media (max-width: 600px) {
-  h1 {
+  #banner h1 {
     font-size: 42px;
     font-size: 8vw;
   }
@@ -611,7 +616,7 @@ ol.custom li:hover{
 }
 
 @media (max-width: 400px) {
-  h1 {
+  #banner h1 {
     font-size: 36px;
     font-size: 8vw;
   }
