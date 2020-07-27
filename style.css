@@ -293,16 +293,32 @@ section {
   text-decoration: none;
 }
 
-.card .card-image img {
-  width: 100%;
+.card-header{
+  display: flex;
+  padding: 10px;
+}
+
+.card-header h2,
+.card-header h4{
+  margin: 0;
+}
+
+.card-image img {
+  width: 70px;
+  /* padding-right: 10px; */
 }
 
 .card-image {
+  padding-right: 10px;
   transition: 0.4s;
 }
 
 .card-image:hover {
-  box-shadow: 0 10px 6px -6px #777;
+  /* box-shadow: 0 10px 6px -6px #777; */
+}
+
+.card-heading{
+  padding-left: 10px;
 }
 
 .clickable-card .card-image:hover {
@@ -525,7 +541,7 @@ ol.custom li:hover{
 
 /* Media Queries */
 
-@media (max-width: 1028px) {
+@media (max-width: 1024px) {
   .card {
     width: 48%;
   }
