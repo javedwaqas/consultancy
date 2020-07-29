@@ -6,8 +6,8 @@ const searchBox = document.getElementById("searchbox");
 
 
 //initiateFlocking
-if (initiateFlocking)
-  initiateFlocking();
+// if (initiateFlocking)
+  // initiateFlocking();
 
 
 menuIcon.addEventListener('click', function () {
@@ -58,8 +58,8 @@ function scrollFunction() {
 
   function resizeCanvas() {
     //initiateFlocking
-    if (initiateFlocking)
-      restartFlocking();
+    // if (initiateFlocking)
+    //   restartFlocking();
 
           // canvas.width = window.innerWidth;
           // canvas.height = window.innerHeight;

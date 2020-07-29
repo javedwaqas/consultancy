@@ -51,18 +51,24 @@ textarea:focus {
 
 #banner {
   height: 100vh;
+  overflow: hidden;
+  /* height: 400px; */
   position: relative;
   pointer-events: none;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  /* background: rgba(0, 0, 0, 0.2) url("img/3.jpg"); */
-  background: #ffffff0f;
+  /* background: rgba(0, 0, 0, 0.2) url("img/svg/banner.png"); */
+  /* background: #ffffff0f; */
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
   background-blend-mode: overlay;
+
+  background-image: linear-gradient(to right, #aa00fffc 0%, #e61ee69a 100%);
+  /* background-position: right center; */
+
   color: white;
 }
 
@@ -74,6 +80,11 @@ textarea:focus {
   text-decoration: none;
 }
 
+.bannerimage{
+  max-width: 500px;
+  z-index: -1;
+}
+
 .banner-heading,
 .banner-subheading {
   color: white;
@@ -82,7 +93,7 @@ textarea:focus {
 
 .banner-heading {
   padding: 8px;
-  background: rgba(255, 0, 221, 0.8);
+  /* background: rgba(255, 0, 221, 0.8); */
   border-radius: 8px;
   margin: 0;
   font-size: 64px;
@@ -144,14 +155,14 @@ nav {
 
 nav a {
   padding: 0 20px;
-  color: #383838;
+  color: #29434e;
   transition: 0.4s;
 }
 
 nav a:hover,
 footer a:hover {
   text-decoration: none;
-  color: #ff00dd;
+  color: #aa00ff;
 }
 
 nav ul {
@@ -276,13 +287,15 @@ section {
   padding: 4px 32px;
   /* color: rgb(255, 0, 221, 0.8); */
   color: white;
-  background: #ff00ddff;
+  /* background: #df55f2ff; */
+  background-image: linear-gradient(to right, #aa00fffc 0%, #e61ee69a 100%);
   border-radius: 4px;
 }
 
 .section-heading:hover {
   padding: 4px 48px;
-  background: rgb(255, 0, 221, 0.8);
+  /* background: rgb(255, 0, 221, 0.8); */
+  /* background: #aa00fffc; */
   cursor: pointer;
 }
 
