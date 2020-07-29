@@ -1,6 +1,7 @@
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
+  color: #29434e
 }
 
 p {
@@ -16,7 +17,7 @@ main {
 
 a {
   text-decoration: none;
-  color: black;
+  color: #29434e;
 }
 
 a:hover {
@@ -235,7 +236,7 @@ nav ul {
 
 #slideout-menu {
   display: none;
-  background: #2d3436;
+  background: #7200ca;
   z-index: 100;
   position: fixed;
   transition: 0.4s;
@@ -331,6 +332,10 @@ section {
   margin: 0;
 }
 
+.card-header h4{
+  color: #546e7a;
+}
+
 .card-image img {
   width: 70px;
   /* padding-right: 10px; */
@@ -369,14 +374,6 @@ section {
   color:#333;
 }
 
-.card-description h2{
-  margin-bottom: 0;
-}
-
-.card-description h4{
-  margin-top: 0;
-}
-
 .clickable-card{
   /* outline: 4px solid red; */
   /* box-shadow: 5px 10px gray; */
@@ -407,7 +404,7 @@ section {
 /* Footer */
 
 footer {
-  background: black;
+  background: #7200ca;
   padding: 8px;
   color: #eee;
   display: flex;
@@ -449,11 +446,11 @@ footer #social-media-footer ul li {
 }
 
 footer #social-media-footer ul li:hover a .fa-facebook {
-  color: #0077b5;
+  color: #e254ff;
 }
 
 footer #social-media-footer ul li:hover a .fa-linkedin-in {
-  color: #0077b5;
+  color: #e254ff;
 }
 
 footer #social-media-footer ul li:hover a .fa-graduation-cap {
@@ -461,7 +458,7 @@ footer #social-media-footer ul li:hover a .fa-graduation-cap {
 }
 
 footer #social-media-footer ul li:hover a .fa-envelope {
-  color: #0077b5;
+  color: #e254ff;
 }
 
 /* Blog List page */
