@@ -326,7 +326,7 @@ section {
 
 .card-header{
   display: flex;
-  padding: 10px;
+  padding: 10px 8px;
 }
 
 .card-header h2,
@@ -360,15 +360,16 @@ section {
   box-shadow: none;
 }
 
-.card .card-description {
+.card-description {
   padding: 0 8px;
   text-align: left;
 }
 
-.card-description .keywords{
+.card-footer{
+  padding: 0 8px;
 }
 
-.card-description .keyword{
+.card-footer .keyword{
   border-radius: 4px;
   background-color: #546e7a;
   color: white;
