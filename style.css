@@ -316,6 +316,8 @@ section {
 
 .card {
   width: 32%;
+  padding-bottom: 16px;
+  margin-bottom: 50px;
 }
 
 .clickable-card a:hover {
@@ -361,6 +363,19 @@ section {
 .card .card-description {
   padding: 0 8px;
   text-align: left;
+}
+
+.card-description .keywords{
+}
+
+.card-description .keyword{
+  border-radius: 4px;
+  background-color: #546e7a;
+  color: white;
+  padding: 6px 16px;
+  float: left;
+  margin: 2px;
+  font-size: 14px;
 }
 
 .card-meta-blogpost{
