@@ -278,26 +278,29 @@ section {
   flex-wrap: wrap;
 }
 
-.section-heading {
+/* .section-heading {
   font-size: 32px;
   font-family: "Roboto Condensed", sans-serif;
-  /* border-left: 3px solid black;
-  border-right: 3px solid black; */
   transition: all 0.4s;
   display: inline-block;
   padding: 4px 32px;
-  /* color: rgb(255, 0, 221, 0.8); */
   color: white;
-  /* background: #df55f2ff; */
   background-image: linear-gradient(to right, #aa00fffc 0%, #e61ee69a 100%);
   border-radius: 4px;
-}
+} */
 
 .section-heading:hover {
   padding: 4px 48px;
-  /* background: rgb(255, 0, 221, 0.8); */
-  /* background: #aa00fffc; */
   cursor: pointer;
+}
+
+.section-heading {
+  font-size: 32px;
+  font-family: "Roboto Condensed", sans-serif;
+  transition: all 0.4s;
+  display: inline-block;
+  padding: 4px 0px;
+  color: #aa00ff;
 }
 
 /* Section Source */
