@@ -436,7 +436,8 @@ footer a {
 footer #left-footer {
   flex: 1;
   border-right: 1px solid white;
-  padding-left: 32px;
+  text-align: center;
+  /* padding-left: 32px; */
 }
 
 footer #left-footer ul {
@@ -447,7 +448,7 @@ footer #left-footer ul {
 
 footer #right-footer {
   flex: 2;
-  padding: 8px;
+  padding-bottom: 8px;
   text-align: center;
 }
 
