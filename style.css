@@ -654,7 +654,7 @@ ol.custom li:hover{
     text-align: center;
   }
 
-  footer #left-footer {
+  /* footer #left-footer {
     flex: 1;
     border-right: 0;
     padding-left: 0;
@@ -674,7 +674,7 @@ ol.custom li:hover{
   footer #social-media-footer a .fa-github {
     color: black;
     transition: 0.4s;
-  }
+  } */
 }
 
 @media (max-width: 600px) {
